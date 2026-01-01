@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- ----- Header ----- -->
+    <header class="header-section">
+      <div class="nav-parent">
+        <div class="nav-logo">
+          <img src="logo.png" alt="Madni" class="nav-image" />
+        </div>
+        <input type="checkbox" id="nav-btn" class="nav-btn" />
+        <label for="nav-btn" class="nav-label">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+        <nav class="navbar">
+          <ul>
+            <li class="nav-item"><a href="#about-section">about me</a></li>
+            <li class="nav-item"><a href="#skills-section">skills</a></li>
+            <li class="nav-item">
+              <a href="#project-section">projects</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="wrapper">
+      <!-- ----- main ----- -->
+      <main class="hero-section">
+        <div class="hero-image-div center">
+          <div class="hero-image-effect">
+            <img src="hero.jpeg" alt="anime boy" class="hero-image" />
+          </div>
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-heading">i am <span>frontend developer</span>.</h1>
+          <p class="common-para">
+            I Build mordern and responsive websites, convert imagination to
+            reality using HTML, CSS and JavaScript.
+          </p>
+          <div class="center">
+            <a href="#project-section" class="hero-btn btn">See My Work</a>
+          </div>
+        </div>
+      </main>
+      <!-- ----- about section ----- -->
+      <section class="about-section" id="about-section">
+        <div class="common-content">
+          <h2 class="common-heading">About Me</h2>
+        </div>
+        <h3 class="common-subheading">Hi, I am Madni.</h3>
+        <p class="common-para">
+          I love to build cool and responsive websites I learnt HTML, CSS,
+          JavaScript and Python. and now my next goal is to became a full stack
+          developer.
+        </p>
+      </section>
+      <!-- ----- skills section ----- -->
+      <section class="skills-section" id="skills-section">
+        <div class="common-content">
+          <h2 class="common-heading">Skills</h2>
+        </div>
+        <div class="progress">
+          <p class="progress-title">HTML</p>
+          <div class="progress-bar bar1"></div>
+        </div>
+        <div class="progress">
+          <p class="progress-title">CSS</p>
+          <div class="progress-bar bar2"></div>
+        </div>
+        <div class="progress">
+          <p class="progress-title">JS</p>
+          <div class="progress-bar bar3"></div>
+        </div>
+      </section>
+      <!-- ----- project section ----- -->
+      <section class="project-section" id="project-section">
+        <div class="common-content">
+          <h2 class="common-heading">My Projects</h2>
+        </div>
+        <div class="project-parent">
+          <div class="project">
+            <h3 class="common-subheading">Timer App</h3>
+            <p class="project-lang">languages used: HTML CSS JS</p>
+            <div class="center">
+              <a class="btn hero-btn" href="#">GitHub Link</a>
+            </div>
+          </div>
+          <div class="project">
+            <h3 class="common-subheading">To-Do App</h3>
+            <p class="project-lang">languages used: HTML CSS JS</p>
+            <div class="center">
+              <a class="btn hero-btn" href="#">GitHub Link</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- ----- footer ----- -->
+    <footer class="footer-section">
+      <p class="common-para">Made with <i class="fa-solid fa-heart"></i></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+      eruda.init();
+    </script>
+  </body>
+</html>
