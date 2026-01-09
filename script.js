@@ -1,4 +1,4 @@
-import projects from "./project.json" assert { type: "json" };
+import projects from "./project.json" ;
 let template = document.querySelector("#project-template");
 let container = document.querySelector(".project-parent");
 
