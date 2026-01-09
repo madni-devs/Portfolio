@@ -1,15 +1,32 @@
-import projects from "./project.json" ;
-let template = document.querySelector("#project-template");
-let container = document.querySelector(".project-parent");
+const template = document.querySelector("#project-template");
+const container = document.querySelector(".project-parent");
 
-projects.forEach(curElem => {
-  let { name, github, netlify } = curElem;
+async function loadProjects() {
+  try {
+    const res = await fetch("./project.json");
 
-  const curProject = document.importNode(template.content, true);
+    if (!res.ok) {
+      throw new Error("Failed to load projects");
+    }
 
-  curProject.querySelector("#project-name").textContent = name;
-  curProject.querySelector("#project-github").href = github;
-  curProject.querySelector("#project-netlify").href = netlify;
+    const projects = await res.json();
 
-  container.append(curProject);
-});
+    projects.forEach(curElem => {
+      const { name, github, netlify } = curElem;
+
+      const curProject = document.importNode(template.content, true);
+
+      curProject.querySelector("#project-name").textContent = name;
+      curProject.querySelector("#project-github").href = github;
+      curProject.querySelector("#project-netlify").href = netlify;
+
+      container.append(curProject);
+    });
+
+  } catch (err) {
+    console.error(err);
+    container.innerHTML = "<p>Projects failed to load.</p>";
+  }
+}
+
+window.addEventListener("load", loadProjects);
