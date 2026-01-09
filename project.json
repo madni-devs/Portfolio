@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Timer App",
+    "github": "https://github.com/madni-devs/Timer-App",
+    "netlify": "https://mtimerapp.netlify.app/"
+  },
+  {
+    "name": "To-Do App",
+    "github": "https://github.com/madni-devs/Todo-App",
+    "netlify": "https://mto-do-app.netlify.app/"
+  },
+  {
+    "name": "Weather App",
+    "github": "https://github.com/madni-devs/Weather-App",
+    "netlify": "https://mweatherappp.netlify.app/"
+  }
+]
